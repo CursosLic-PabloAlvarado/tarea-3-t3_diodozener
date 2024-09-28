@@ -42,7 +42,7 @@
  */
 
 #include <cstdlib>
-
+#include "biquad.h"
 #include <iostream>
 #include <stdexcept>
 #include <filesystem>
@@ -85,6 +85,8 @@ int main (int argc, char *argv[])
     std::string filter_file;
     std::vector< std::vector< sample_t > > filter_coefs;
     
+
+   
     // Parse options from the command line
     po::options_description desc("Allowed options");
 
