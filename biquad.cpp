@@ -11,7 +11,7 @@ void biquad::set_coefficients(float b0_, float b1_, float b2_, float a0_, float 
 }
 
 // Método para procesar un bloque de muestras
-void biquad::process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out) {
+bool biquad::process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out) {
     for (jack_nframes_t i = 0; i < nframes; ++i) {
         // Filtro IIR: y[n] = (b0 * x[n] + b1 * x[n-1] + b2 * x[n-2]
         //                     - a1 * y[n-1] - a2 * y[n-2]) / a0
@@ -28,6 +28,7 @@ void biquad::process(jack_nframes_t nframes, const sample_t* const in, sample_t*
         x2 = x1; x1 = x0;
         y2 = y1; y1 = y0;
     }
+    return true;
 }
 
 // Método para reiniciar el estado del filtro
