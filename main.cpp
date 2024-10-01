@@ -78,6 +78,7 @@ int main (int argc, char *argv[])
   
   try {
     static passthrough_client client;
+    //static biquad client;
 
     typedef jack::client::sample_t sample_t;
     
@@ -159,9 +160,13 @@ int main (int argc, char *argv[])
           std::cout << "Repeat playing files" << std::endl;
         } break;
         default: {
-          if (key>32) {
-            std::cout << "Key " << char(key) << " pressed" << std::endl;
-          } else {
+          if(key==112){
+            
+            std::cout<<"se presiono la tecla P"<<std::endl;
+            
+            
+          }
+          else {
             std::cout << "Key " << key << " pressed" << std::endl;
           }
           key=-1;
