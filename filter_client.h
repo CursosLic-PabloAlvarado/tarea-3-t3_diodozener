@@ -4,12 +4,11 @@
 
 #include "jack_client.h"
 #include "biquad.h"
+#include "cascade.h"
+#include <vector>
 
-/**
- * Jack client class
- *
- * This class wraps some basic jack functionality.
- */
+using namespace std;
+
 class filter_client : public jack::client {
     
 public:
@@ -26,11 +25,13 @@ public:
                // 1:biquad
                // 2:cascade
     biquad Biquad;
+    cascade Cascade;
 
 
     virtual bool process(jack_nframes_t nframes,
                        const sample_t *const in,
                        sample_t *const out) override;
+    void setcoefs(vector<vector<double>> Matrix);
 };
 
 

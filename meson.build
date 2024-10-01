@@ -9,6 +9,6 @@ boost_dep = dependency('boost', modules : ['program_options','system'])
 threads_dep=dependency('threads') #agregando hilos
 all_deps = [jack_dep,sndfile_dep,boost_dep,threads_dep]
 sources = files('main.cpp', 'jack_client.cpp','filter_client.cpp',
-                'sndfile_thread.cpp','waitkey.cpp','biquad.cpp')
+                'sndfile_thread.cpp','waitkey.cpp','biquad.cpp','cascade.cpp')
 
 executable('tarea3',sources,dependencies:all_deps)

@@ -13,6 +13,15 @@ void biquad::set_coefficients(float b0_, float b1_, float b2_, float a0_, float 
     a0 = a0_; a1 = a1_; a2 = a2_;
 }
 
+void biquad::set_coefficients_vector(vector<double> coefs){
+    b0=coefs[0];
+    b1=coefs[1];
+    b2=coefs[2];
+    a0=coefs[3];
+    a1=coefs[4];
+    a2=coefs[5];
+}
+
 // Método para procesar un bloque de muestras
 bool biquad::process(jack_nframes_t nframes, 
                     const sample_t* const in, 

@@ -1,7 +1,10 @@
 #ifndef BIQUAD_H
 #define BIQUAD_H
 
+#include "jack_client.h"
+#include <vector>
 
+using namespace std;
 using sample_t = float; 
 
 class biquad{
@@ -12,6 +15,7 @@ public:
     biquad();
 
     void set_coefficients(float b0_, float b1_, float b2_, float a0_, float a1_, float a2_);
+    void set_coefficients_vector(vector<double> coefs);
 
     // Método para procesar un bloque de muestras
     bool process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out);

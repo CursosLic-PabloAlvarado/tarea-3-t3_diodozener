@@ -1,5 +1,4 @@
 #include "filter_client.h"
-#include "biquad.h"
 #include <cstring>
 
 filter_client::filter_client() : jack::client() {
@@ -8,7 +7,8 @@ filter_client::filter_client() : jack::client() {
 
 filter_client::~filter_client() {
 }
-  
+
+
 bool filter_client::process(jack_nframes_t nframes,
                                  const sample_t *const in,
                                  sample_t *const out) {
@@ -17,11 +17,14 @@ bool filter_client::process(jack_nframes_t nframes,
     return true;
   }else if (mode==1){//biquad mode
     return Biquad.process(nframes,in,out);
-  }else{
-    memcpy (out, in, sizeof(sample_t)*nframes);
-    return true;
+  }else if (mode==2){
+    return Cascade.process(nframes,in,out);
   }
   
 
+}
+
+void filter_client::setcoefs(vector<vector<double>> Matrix){
+    Cascade.setcoefs(Matrix);
 }
   

@@ -57,13 +57,18 @@
 #include "parse_filter.h"
 
 namespace po=boost::program_options;
+using namespace std;
+
+  
+ // namespace std;
+
 
 /**
  * Handler for the SIGINT (interrupt signal)
  */
 void signal_handler(int signal) {
   if (signal == SIGINT) {
-    std::cout << "Ctrl-C caught, cleaning up and exiting" << std::endl;
+    cout << "Ctrl-C caught, cleaning up and exiting" <<endl;
 
     // Let RAII do the clean-up
     exit(EXIT_SUCCESS);
@@ -72,7 +77,7 @@ void signal_handler(int signal) {
 
 int main (int argc, char *argv[])
 {
-  std::signal(SIGINT,signal_handler);
+  signal(SIGINT,signal_handler);
 
   
   try {
@@ -82,8 +87,8 @@ int main (int argc, char *argv[])
     typedef jack::client::sample_t sample_t;
     
     // Filter coefficients
-    std::string filter_file;
-    std::vector< std::vector< sample_t > > filter_coefs;
+    string filter_file;
+    vector< vector< double > > filter_coefs;
     
 
    
@@ -104,33 +109,34 @@ int main (int argc, char *argv[])
     po::notify(vm);
     
     if (vm.count("help")) {
-      std::cout << desc << std::endl;
+      cout << desc << endl;
       return EXIT_SUCCESS;
     }
 
     if (vm.count("files")) {
-      const std::vector< std::filesystem::path >&
-        audio_files = vm["files"].as< std::vector<std::filesystem::path> >();
+      const vector< filesystem::path >&
+        audio_files = vm["files"].as< vector<filesystem::path> >();
     
       for (const auto& f : audio_files) {
         bool ok =client.add_file(f);
-        std::cout << "Adding file '" << f.c_str() << "' "
-                  << (ok ? "succedded" : "failed") << std::endl;
+        cout << "Adding file '" << f.c_str() << "' "
+                  << (ok ? "succedded" : "failed") << endl;
       }
     }
 
     if (vm.count("coeffs")) {
-      filter_coefs = parse_filter<sample_t>(filter_file);
-      std::cout << filter_coefs.size() << " 2nd order filter read from "
+      filter_coefs = parse_filter<double>(filter_file);
+      client.setcoefs(filter_coefs);
+      cout << filter_coefs[0].size() << " 2nd order filter read from "
                 << filter_file;
     }
     
     if (client.init() != jack::client_state::Running) {
-      throw std::runtime_error("Could not initialize the JACK client");
+      throw runtime_error("Could not initialize the JACK client");
     }
 
     // keep running until stopped by the user
-    std::cout << "Press x key to exit" << std::endl;
+    cout << "Press x key to exit" << endl;
 
     int key = -1;
     bool go_away=false;
@@ -140,32 +146,32 @@ int main (int argc, char *argv[])
         switch(key) {
         case 'x': {
           go_away=true;
-          std::cout << "Finishing..." << std::endl;
+          cout << "Finishing..." << endl;
         } break;
         case 'r': {
           if (vm.count("files")) {
-            const std::vector< std::filesystem::path >&
+            const vector< filesystem::path >&
               audio_files =
-              vm["files"].as< std::vector<std::filesystem::path> >();
+              vm["files"].as< vector<filesystem::path> >();
             
             for (const auto& f : audio_files) {
               bool ok =client.add_file(f);
-              std::cout << "  Re-adding file '" << f.c_str() << "' "
-                        << (ok ? "succedded" : "failed") << std::endl;
+              cout << "  Re-adding file '" << f.c_str() << "' "
+                        << (ok ? "succedded" : "failed") << endl;
             }
           }
           
-          std::cout << "Repeat playing files" << std::endl;
+          cout << "Repeat playing files" << endl;
         } break;
         default: {
           if(key==112){//Presiona p
             client.mode=1;
           }else if (key==99){//Presiona c
-            std::cout<<"se presiono la tecla c"<<std::endl;
+            client.mode=2;
           }else if (key==80){//Presiona P
             client.mode=0;
           }else {
-            std::cout << "Key " << key << " pressed" << std::endl;
+            cout << "Key " << key << " pressed" << endl;
           }
           key=-1;
         }
@@ -175,8 +181,8 @@ int main (int argc, char *argv[])
 
     client.stop();
   }
-  catch (std::exception& exc) {
-    std::cout << argv[0] << ": Error: " << exc.what() << std::endl;
+  catch (exception& exc) {
+    cout << argv[0] << ": Error: " << exc.what() <<endl;
     exit(EXIT_FAILURE);
   }
   
