@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/main.cpp.o' -MF 'tarea3@exe/main.cpp.o.d' -o 'tarea3@exe/main.cpp.o' -c ../main.cpp",
+    "file": "../main.cpp",
+    "output": "tarea3@exe/main.cpp.o"
+  },
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/jack_client.cpp.o' -MF 'tarea3@exe/jack_client.cpp.o.d' -o 'tarea3@exe/jack_client.cpp.o' -c ../jack_client.cpp",
+    "file": "../jack_client.cpp",
+    "output": "tarea3@exe/jack_client.cpp.o"
+  },
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/passthrough_client.cpp.o' -MF 'tarea3@exe/passthrough_client.cpp.o.d' -o 'tarea3@exe/passthrough_client.cpp.o' -c ../passthrough_client.cpp",
+    "file": "../passthrough_client.cpp",
+    "output": "tarea3@exe/passthrough_client.cpp.o"
+  },
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/sndfile_thread.cpp.o' -MF 'tarea3@exe/sndfile_thread.cpp.o.d' -o 'tarea3@exe/sndfile_thread.cpp.o' -c ../sndfile_thread.cpp",
+    "file": "../sndfile_thread.cpp",
+    "output": "tarea3@exe/sndfile_thread.cpp.o"
+  },
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/waitkey.cpp.o' -MF 'tarea3@exe/waitkey.cpp.o.d' -o 'tarea3@exe/waitkey.cpp.o' -c ../waitkey.cpp",
+    "file": "../waitkey.cpp",
+    "output": "tarea3@exe/waitkey.cpp.o"
+  },
+  {
+    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/biquad.cpp.o' -MF 'tarea3@exe/biquad.cpp.o.d' -o 'tarea3@exe/biquad.cpp.o' -c ../biquad.cpp",
+    "file": "../biquad.cpp",
+    "output": "tarea3@exe/biquad.cpp.o"
+  }
+]
