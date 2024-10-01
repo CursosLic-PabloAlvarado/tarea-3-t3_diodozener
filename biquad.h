@@ -1,7 +1,7 @@
 #ifndef BIQUAD_H
 #define BIQUAD_H
 
-//#include <jack/jack.h>
+
 #include "jack_client.h"
 
 // Definición de tipos
@@ -15,7 +15,7 @@ public:
     biquad();
     int operation=0;
     // Método para configurar los coeficientes del filtro
-    void set_coefficients(double b0_, double b1_, double b2_, double a0_, double a1_, double a2_);
+    void set_coefficients(float b0_, float b1_, float b2_, float a0_, float a1_, float a2_);
 
     // Método para procesar un bloque de muestras
     virtual bool process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out);

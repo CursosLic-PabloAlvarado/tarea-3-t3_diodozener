@@ -6,7 +6,7 @@ biquad::biquad() : jack::client(), a0(1.0), a1(0.0), a2(0.0), b0(1.0), b1(0.0), 
                    x1(0.0), x2(0.0), y1(0.0), y2(0.0) {}
 
 // Método para configurar los coeficientes del filtro
-void biquad::set_coefficients(double b0_, double b1_, double b2_, double a0_, double a1_, double a2_) {
+void biquad::set_coefficients(float b0_, float b1_, float b2_, float a0_, float a1_, float a2_) {
     b0 = b0_; b1 = b1_; b2 = b2_;
     a0 = a0_; a1 = a1_; a2 = a2_;
 }
