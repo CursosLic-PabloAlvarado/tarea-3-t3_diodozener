@@ -1,6 +1,8 @@
 #include "biquad.h"
 #include <iostream>
 
+
+
 // Constructor: inicializa el filtro a cero
 biquad::biquad() :  a0(1.0), a1(0.0), a2(0.0), b0(1.0), b1(0.0), b2(0.0),
                    x1(0.0), x2(0.0), y1(0.0), y2(0.0) {}
@@ -12,35 +14,25 @@ void biquad::set_coefficients(float b0_, float b1_, float b2_, float a0_, float 
 }
 
 // Método para procesar un bloque de muestras
-bool biquad::process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out) {
+bool biquad::process(jack_nframes_t nframes, 
+                    const sample_t* const in, 
+                    sample_t* const out) {
+
     const sample_t *const end_ptr = in + nframes;
     const sample_t *ptr = in;
     sample_t *optr = out;
 
     while (ptr != end_ptr) {
-        if (operation == 0) {
-            // Modo bypass: la salida es igual a la entrada
-            *optr++ = *ptr++;
-        } else if (operation == 1) {
-            // Filtro IIR: y[n] = (b0 * x[n] + b1 * x[n-1] + b2 * x[n-2]
-            //                      - a1 * y[n-1] - a2 * y[n-2]) / a0
+        sample_t x0 = *ptr;
+        *optr = (b0 * x0 + b1 * x1 + b2 * x2 - a1 * y1 - a2 * y2) / a0;
 
-            // Leer la entrada actual
-            sample_t x0 = *ptr;
+        x2 = x1;
+        x1 = x0;
+        y2 = y1;
+        y1 = *optr;
 
-            // Aplicar el filtro con las muestras anteriores (historial)
-            *optr = (b0 * x0 + b1 * x1 + b2 * x2 - a1 * y1 - a2 * y2) / a0;
-            std::cout << "Input: " << *ptr << " Output: " << *optr << std::endl;
-            // Actualizar historial
-            x2 = x1;
-            x1 = x0;
-            y2 = y1;
-            y1 = *optr;
-
-            // Avanzar punteros
-            optr++;
-            ptr++;
-        }
+        optr++;
+        ptr++;
     }
 
     return true;

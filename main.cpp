@@ -42,7 +42,6 @@
  */
 
 #include <cstdlib>
-#include "biquad.h"
 #include <iostream>
 #include <stdexcept>
 #include <filesystem>
@@ -53,7 +52,7 @@
 #include <boost/program_options.hpp>
 
 #include "waitkey.h"
-#include "passthrough_client.h"
+#include "filter_client.h"
 
 #include "parse_filter.h"
 
@@ -77,7 +76,7 @@ int main (int argc, char *argv[])
 
   
   try {
-    static passthrough_client client;
+    static filter_client client;
     //static biquad client;
 
     typedef jack::client::sample_t sample_t;
@@ -144,7 +143,6 @@ int main (int argc, char *argv[])
           std::cout << "Finishing..." << std::endl;
         } break;
         case 'r': {
-
           if (vm.count("files")) {
             const std::vector< std::filesystem::path >&
               audio_files =
@@ -160,13 +158,13 @@ int main (int argc, char *argv[])
           std::cout << "Repeat playing files" << std::endl;
         } break;
         default: {
-          if(key==112){
-            
-            std::cout<<"se presiono la tecla P"<<std::endl;
-            
-            
-          }
-          else {
+          if(key==112){//Presiona p
+            client.mode=1;
+          }else if (key==99){//Presiona c
+            std::cout<<"se presiono la tecla c"<<std::endl;
+          }else if (key==80){//Presiona P
+            client.mode=0;
+          }else {
             std::cout << "Key " << key << " pressed" << std::endl;
           }
           key=-1;
