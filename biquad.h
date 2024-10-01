@@ -7,7 +7,7 @@
 // Definición de tipos
 using sample_t = double; 
 
-class biquad : public jack::client  {
+class biquad{
 
 
 public:
@@ -18,7 +18,7 @@ public:
     void set_coefficients(float b0_, float b1_, float b2_, float a0_, float a1_, float a2_);
 
     // Método para procesar un bloque de muestras
-    virtual bool process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out);
+    bool process(jack_nframes_t nframes, const sample_t* const in, sample_t* const out);
 
     // Método para reiniciar el estado del filtro
     void reset();

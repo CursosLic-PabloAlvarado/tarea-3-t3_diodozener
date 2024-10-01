@@ -2,7 +2,7 @@
 #include <iostream>
 
 // Constructor: inicializa el filtro a cero
-biquad::biquad() : jack::client(), a0(1.0), a1(0.0), a2(0.0), b0(1.0), b1(0.0), b2(0.0),
+biquad::biquad() :  a0(1.0), a1(0.0), a2(0.0), b0(1.0), b1(0.0), b2(0.0),
                    x1(0.0), x2(0.0), y1(0.0), y2(0.0) {}
 
 // Método para configurar los coeficientes del filtro
