@@ -1,41 +1,310 @@
-Build started at 2024-09-28T08:06:23.782594
+Build started at 2024-10-08T20:42:51.870549
 Main binary: /usr/bin/python3
 Build Options: 
 Python system: Linux
 The Meson build system
-Version: 0.53.2
-Source dir: /home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener
-Build dir: /home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir
+Version: 1.3.2
+Source dir: /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener
+Build dir: /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir
 Build type: native build
 Project name: tarea3
 Project version: 0.0.2
-C++ compiler for the build machine: c++ (gcc 9.4.0 "c++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0")
-C++ linker for the build machine: c++ ld.bfd 2.34
-C++ compiler for the host machine: c++ (gcc 9.4.0 "c++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0")
-C++ linker for the host machine: c++ ld.bfd 2.34
+-----------
+Detecting compiler via: `c++ --version` -> 0
+stdout:
+c++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: c++ -E -dM -
+-----
+-----------
+Detecting linker via: `c++ -Wl,--version` -> 0
+stdout:
+GNU ld (GNU Binutils for Ubuntu) 2.42
+Copyright (C) 2024 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 13.2.0
+/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccE9Tbsa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. --version -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+-----------
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+Sanity check compiler command line: c++ sanitycheckcpp.cc -o sanitycheckcpp.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/sanitycheckcpp.exe
+C++ compiler for the host machine: c++ (gcc 13.2.0 "c++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0")
+C++ linker for the host machine: c++ ld.bfd 2.42
+-----------
+Detecting archiver via: `gcc-ar --version` -> 0
+stdout:
+GNU ar (GNU Binutils for Ubuntu) 2.42
+Copyright (C) 2024 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+-----------
+-----------
+Detecting compiler via: `c++ --version` -> 0
+stdout:
+c++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: c++ -E -dM -
+-----
+-----------
+Detecting linker via: `c++ -Wl,--version` -> 0
+stdout:
+GNU ld (GNU Binutils for Ubuntu) 2.42
+Copyright (C) 2024 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 13.2.0
+/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cciT361s.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. --version -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+-----------
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+Sanity check compiler command line: c++ sanitycheckcpp.cc -o sanitycheckcpp.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: c++ (gcc 13.2.0 "c++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0")
+C++ linker for the build machine: c++ ld.bfd 2.42
+-----------
+Detecting archiver via: `gcc-ar --version` -> 0
+stdout:
+GNU ar (GNU Binutils for Ubuntu) 2.42
+Copyright (C) 2024 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+-----------
 Build machine cpu family: x86_64
 Build machine cpu: x86_64
 Host machine cpu family: x86_64
 Host machine cpu: x86_64
 Target machine cpu family: x86_64
 Target machine cpu: x86_64
-Dependency jack found: YES 1.9.12 (cached)
-Dependency sndfile found: YES 1.0.28 (cached)
-Dependency boost found: YES 1.71 (cached)
-Dependency threads found: YES unknown (cached)
-Build targets in project: 1
-
-Found ninja-1.10.0 at /usr/bin/ninja
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: YES (/usr/bin/pkg-config) 1.8.1
+Determining dependency 'jack' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion jack` -> 0
+stdout:
+1.9.21
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags jack` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs jack` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -ljack
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs jack` -> 0
+stdout:
+-ljack
+-----------
 Running compile:
-Working directory:  /home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir/meson-private/tmpjcgv7ofg
-Command line:  c++ /home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir/meson-private/tmpjcgv7ofg/testfile.cpp -o /home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir/meson-private/tmpjcgv7ofg/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
-
+Working directory:  /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmplhfiixk8
 Code:
  
-Compiler stdout:
- install: /usr/lib/gcc/x86_64-linux-gnu/9/
-programs: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/
-libraries: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/9/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/9/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+        #include<stddef.h>
+        #include<stdio.h>
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+-----------
+Command line: `c++ /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmplhfiixk8/testfile.cpp -o /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmplhfiixk8/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive` -> 0
+Program stdout:
 
-Compiler stderr:
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmpx0hycyf_
+Code:
  
+-----------
+Command line: `c++ /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmpx0hycyf_/testfile.cpp -o /home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/meson-private/tmpx0hycyf_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs` -> 0
+stdout:
+install: /usr/lib/gcc/x86_64-linux-gnu/13/
+programs: =/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/13/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/13/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+-----------
+Run-time dependency jack found: YES 1.9.21
+Determining dependency 'sndfile' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion sndfile` -> 0
+stdout:
+1.2.2
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags sndfile` -> 0
+stdout:
+-I/usr/include/opus -I/usr/include/x86_64-linux-gnu
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs sndfile` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lsndfile
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs sndfile` -> 0
+stdout:
+-lsndfile
+-----------
+Run-time dependency sndfile found: YES 1.2.2
+Determining dependency 'boost' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion boost` -> 1
+stderr:
+Package boost was not found in the pkg-config search path.
+Perhaps you should add the directory containing `boost.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'boost', required by 'virtual:world', not found
+-----------
+Checking potential boost root /usr/include/c++
+Checking potential boost root /usr/include/x86_64-linux-gnu/c++
+Checking potential boost root /usr/include/c++/13
+Checking potential boost root /usr/lib/gcc/x86_64-linux-gnu/13
+Checking potential boost root /usr/local
+Checking potential boost root /usr/include
+  - potential library dirs: ['/usr/include/libltdl', '/usr/include/libmount', '/usr/include/libnl3']
+  - potential include dirs: ['/usr/include']
+  - found boost 1.83.0 include dir: /usr/include
+  - filtered library list:
+  - found:
+  - NOT found:
+    - boost_program_options
+    - boost_system
+Checking potential boost root /usr
+  - potential library dirs: ['/usr/lib/gcc/x86_64-linux-gnu/13', '/usr/lib/x86_64-linux-gnu', '/usr/lib']
+  - potential include dirs: ['/usr/include']
+  - found boost library dir: /usr/lib/x86_64-linux-gnu
+  - found boost 1.83.0 include dir: /usr/include
+  - filtered library list:
+    - <LIB: -M ------ ??? ? 1_83 boost_atomic                     /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_chrono                     /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_container                  /usr/lib/x86_64-linux-gnu/libboost_container.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_context                    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_coroutine                  /usr/lib/x86_64-linux-gnu/libboost_coroutine.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_date_time                  /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_fiber                      /usr/lib/x86_64-linux-gnu/libboost_fiber.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_filesystem                 /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_graph                      /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_graph_parallel             /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_iostreams                  /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_json                       /usr/lib/x86_64-linux-gnu/libboost_json.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_locale                     /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_log                        /usr/lib/x86_64-linux-gnu/libboost_log.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_log_setup                  /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_c99                   /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_c99f                  /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_c99l                  /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_tr1                   /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_tr1f                  /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_math_tr1l                  /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_mpi                        /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_mpi_python312              /usr/lib/x86_64-linux-gnu/libboost_mpi_python312.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_nowide                     /usr/lib/x86_64-linux-gnu/libboost_nowide.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_numpy312                   /usr/lib/x86_64-linux-gnu/libboost_numpy312.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_prg_exec_monitor           /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_program_options            /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_python312                  /usr/lib/x86_64-linux-gnu/libboost_python312.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_random                     /usr/lib/x86_64-linux-gnu/libboost_random.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_regex                      /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_serialization              /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_stacktrace_addr2line       /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_stacktrace_backtrace       /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_stacktrace_basic           /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_stacktrace_noop            /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_system                     /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_thread                     /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_timer                      /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_type_erasure               /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_unit_test_framework        /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_url                        /usr/lib/x86_64-linux-gnu/libboost_url.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_wave                       /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.83.0>
+    - <LIB: -M ------ ??? ? 1_83 boost_wserialization             /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.83.0>
+  - found:
+    - boost_program_options    link=['/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.83.0'] comp=[]
+    - boost_system             link=['/usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0'] comp=['-DBOOST_SYSTEM_DYN_LINK=1']
+  - final compile args: ['-I/usr/include', '-DBOOST_SYSTEM_DYN_LINK=1', '-DBOOST_ALL_NO_LIB']
+  - final link args:    ['/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.83.0', '/usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0']
+Run-time dependency Boost (found: program_options, system) found: YES 1.83.0 (/usr)
+Run-time dependency threads found: YES
+Determining dependency 'benchmark' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion benchmark` -> 0
+stdout:
+1.8.3
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags benchmark` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs benchmark` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lbenchmark
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs benchmark` -> 0
+stdout:
+-lbenchmark
+-----------
+Run-time dependency benchmark found: YES 1.8.3
+Adding benchmark "benchmark_suite"
+Build targets in project: 2
+
+Found ninja-1.11.1 at /usr/bin/ninja

@@ -1,1 +1,1 @@
-[]
+[{"cmd": ["/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir/benchmark_tarea3"], "env": {}, "name": "benchmark_suite", "workdir": null, "timeout": 30, "suite": ["tarea3"], "is_parallel": false, "priority": 0, "protocol": "exitcode", "depends": ["benchmark_tarea3@exe"], "extra_paths": []}]

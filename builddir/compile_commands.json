@@ -1,38 +1,62 @@
 [
   {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/main.cpp.o' -MF 'tarea3@exe/main.cpp.o.d' -o 'tarea3@exe/main.cpp.o' -c ../main.cpp",
-    "file": "../main.cpp",
-    "output": "tarea3@exe/main.cpp.o"
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Ibenchmark_tarea3.p -I. -I.. -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -std=c++20 -MD -MQ benchmark_tarea3.p/benchmark.cpp.o -MF benchmark_tarea3.p/benchmark.cpp.o.d -o benchmark_tarea3.p/benchmark.cpp.o -c ../benchmark.cpp",
+    "file": "../benchmark.cpp",
+    "output": "benchmark_tarea3.p/benchmark.cpp.o"
   },
   {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/jack_client.cpp.o' -MF 'tarea3@exe/jack_client.cpp.o.d' -o 'tarea3@exe/jack_client.cpp.o' -c ../jack_client.cpp",
-    "file": "../jack_client.cpp",
-    "output": "tarea3@exe/jack_client.cpp.o"
-  },
-  {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/passthrough_client.cpp.o' -MF 'tarea3@exe/passthrough_client.cpp.o.d' -o 'tarea3@exe/passthrough_client.cpp.o' -c ../passthrough_client.cpp",
-    "file": "../passthrough_client.cpp",
-    "output": "tarea3@exe/passthrough_client.cpp.o"
-  },
-  {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/sndfile_thread.cpp.o' -MF 'tarea3@exe/sndfile_thread.cpp.o.d' -o 'tarea3@exe/sndfile_thread.cpp.o' -c ../sndfile_thread.cpp",
-    "file": "../sndfile_thread.cpp",
-    "output": "tarea3@exe/sndfile_thread.cpp.o"
-  },
-  {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/waitkey.cpp.o' -MF 'tarea3@exe/waitkey.cpp.o.d' -o 'tarea3@exe/waitkey.cpp.o' -c ../waitkey.cpp",
-    "file": "../waitkey.cpp",
-    "output": "tarea3@exe/waitkey.cpp.o"
-  },
-  {
-    "directory": "/home/rayo/Desktop/tec/Dsp/tarea3/tarea-3-t3_diodozener/builddir",
-    "command": "c++ -Itarea3@exe -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++2a -g -pthread -MD -MQ 'tarea3@exe/biquad.cpp.o' -MF 'tarea3@exe/biquad.cpp.o.d' -o 'tarea3@exe/biquad.cpp.o' -c ../biquad.cpp",
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Ibenchmark_tarea3.p -I. -I.. -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -std=c++20 -MD -MQ benchmark_tarea3.p/biquad.cpp.o -MF benchmark_tarea3.p/biquad.cpp.o.d -o benchmark_tarea3.p/biquad.cpp.o -c ../biquad.cpp",
     "file": "../biquad.cpp",
-    "output": "tarea3@exe/biquad.cpp.o"
+    "output": "benchmark_tarea3.p/biquad.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Ibenchmark_tarea3.p -I. -I.. -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -std=c++20 -MD -MQ benchmark_tarea3.p/cascade.cpp.o -MF benchmark_tarea3.p/cascade.cpp.o.d -o benchmark_tarea3.p/cascade.cpp.o -c ../cascade.cpp",
+    "file": "../cascade.cpp",
+    "output": "benchmark_tarea3.p/cascade.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/main.cpp.o -MF tarea3.p/main.cpp.o.d -o tarea3.p/main.cpp.o -c ../main.cpp",
+    "file": "../main.cpp",
+    "output": "tarea3.p/main.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/jack_client.cpp.o -MF tarea3.p/jack_client.cpp.o.d -o tarea3.p/jack_client.cpp.o -c ../jack_client.cpp",
+    "file": "../jack_client.cpp",
+    "output": "tarea3.p/jack_client.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/filter_client.cpp.o -MF tarea3.p/filter_client.cpp.o.d -o tarea3.p/filter_client.cpp.o -c ../filter_client.cpp",
+    "file": "../filter_client.cpp",
+    "output": "tarea3.p/filter_client.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/sndfile_thread.cpp.o -MF tarea3.p/sndfile_thread.cpp.o.d -o tarea3.p/sndfile_thread.cpp.o -c ../sndfile_thread.cpp",
+    "file": "../sndfile_thread.cpp",
+    "output": "tarea3.p/sndfile_thread.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/waitkey.cpp.o -MF tarea3.p/waitkey.cpp.o.d -o tarea3.p/waitkey.cpp.o -c ../waitkey.cpp",
+    "file": "../waitkey.cpp",
+    "output": "tarea3.p/waitkey.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/biquad.cpp.o -MF tarea3.p/biquad.cpp.o.d -o tarea3.p/biquad.cpp.o -c ../biquad.cpp",
+    "file": "../biquad.cpp",
+    "output": "tarea3.p/biquad.cpp.o"
+  },
+  {
+    "directory": "/home/marcelo/github-classroom/CursosLic-PabloAlvarado/tarea-3-t3_diodozener/builddir",
+    "command": "c++ -Itarea3.p -I. -I.. -I/usr/include/opus -I/usr/include/x86_64-linux-gnu -I/usr/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++2a -O0 -g -pthread -DBOOST_SYSTEM_DYN_LINK=1 -DBOOST_ALL_NO_LIB -MD -MQ tarea3.p/cascade.cpp.o -MF tarea3.p/cascade.cpp.o.d -o tarea3.p/cascade.cpp.o -c ../cascade.cpp",
+    "file": "../cascade.cpp",
+    "output": "tarea3.p/cascade.cpp.o"
   }
 ]
