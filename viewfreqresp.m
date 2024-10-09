@@ -1,3 +1,5 @@
+pkg load signal
+
 function viewfreqresp(filename, Fs)
     if nargin < 2
         Fs = 48000; % Frecuencia de muestreo por defecto
@@ -47,8 +49,13 @@ function viewfreqresp(filename, Fs)
 
     % Diagrama de polos y ceros
     figure;
-
     zplane(B, A);
+    xlabel('Eje Real');   % Etiqueta del eje x
+    ylabel('Eje Imaginario');   % Etiqueta del eje y
     title('Diagrama de Polos y Ceros');
+
+    % Asegúrate de que las etiquetas se dibujen
+    set(gca, 'XColor', 'k', 'YColor', 'k'); % Asegura el color de los ejes
+    axis equal; % Asegura que la escala de los ejes sea la misma
 end
 
